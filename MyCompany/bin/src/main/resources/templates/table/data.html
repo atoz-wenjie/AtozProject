@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<link th:include="commonMain :: commonhead">
+<body class="hold-transition sidebar-mini">
+<title>Listing</title>
+<div class="wrapper">
+  <head>
+    <link rel="stylesheet" href="../../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+     <!-- SweetAlert2 -->
+  <link rel="stylesheet" href="../../plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+  <!-- Toastr -->
+  <link rel="stylesheet" href="../../plugins/toastr/toastr.min.css">
+  </head>
+  <link th:include="commonMain :: header">
+
+  <link th:include="commonMain :: sidebar">
+ 
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Listing <span style="font-size:20px; color:#869099">P10002</span></h1>
+          </div>
+        </div>
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-left">
+              <li class="breadcrumb-item"><a href="main">Home</a></li>
+              <li class="breadcrumb-item active">Listing</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">User Listing</h3>
+                <div class="btn-group card-tools" >
+                  <button type="submit" class="btn btn-primary btn-sm" onclick="location.href = 'addnew'">Add New Record</button>
+                </div>
+                <div th:if="${successMsg}">
+                  <body th:onload="showmsg([[${successMsg}]])"></body>
+                </div>
+                
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <table id="example1" class="table table-bordered table-striped">
+                  <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Action</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr th:each="user :${userList}">
+                    <td th:text="${user.userName}">Name</td>
+                    <td th:text="${user.email}">Email</td>
+                    <td th:text="${user.firstName}">First Name</td>
+                    <td th:text="${user.lastName}">Last Name</td>
+                    <td>
+                      <a class="btn btn-success btn-xs" th:href="@{'/viewNew/' + ${user.id}}">READ</a> |
+                      <a class="btn btn-info btn-xs" th:href="@{'/editNew/' + ${user.id}}">EDIT</a> |
+                      <button class="btn btn-danger btn-xs" th:onclick="deleteUser([[${user.userName}]],[[${user.id}]])" >DELETE</button>
+                      <button class="btn btn-danger btn-xs" th:onclick="confirmationPopupSubmitButton('deleteUser',[[${user.id}]],'')">DELETE</button>
+                    </td>
+                  </tr>
+                  </tbody>
+                  <!-- <tfoot>
+                  <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Action</th>
+                  </tr>
+                  </tfoot> -->
+                </table>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <link th:include="commonMain :: footer">
+  
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="../../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- DataTables  & Plugins -->
+<script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="../../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="../../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="../../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="../../plugins/jszip/jszip.min.js"></script>
+<script src="../../plugins/pdfmake/pdfmake.min.js"></script>
+<script src="../../plugins/pdfmake/vfs_fonts.js"></script>
+<script src="../../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="../../plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="../../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.min.js"></script>
+<!-- SweetAlert2 -->
+<script src="../../plugins/sweetalert2/sweetalert2.min.js"></script>
+<!-- Toastr -->
+<script src="../../plugins/toastr/toastr.min.js"></script>
+<!-- Page specific script -->
+
+<script src="../../dist/js/main.js"></script>
+
+<script>
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+  });
+  $(function () {
+        $(".listing_A").addClass("active");
+    });
+  function showmsg(msg){
+    toastr.success(msg);
+  }
+  
+</script>
+</body>
+</html>

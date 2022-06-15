@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="AtozEntity" target="17" />
+      <module name="AtozMain" target="17" />
+      <module name="MyCompany" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
