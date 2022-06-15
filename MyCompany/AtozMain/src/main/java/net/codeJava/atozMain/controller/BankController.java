@@ -118,10 +118,17 @@ public class BankController {
 	}
 	
 	@PostMapping(value = "/processForm1")
-	public String processForm1(@RequestParam(value="persons") String[] text) {
+	public String processForm1(@RequestParam(value="persons", required = false) String[] text) {
 		if(text.length >0) {
 			System.out.println("text1:"+ArrayUtils.toString(text));
 		}
 		return ("redirect:"+"/bank_select");
 	}
+	
+	@RequestMapping(value = "/processForm2", method=RequestMethod.POST)
+	public String processForm2(@ModelAttribute(value="text1233") String text) {
+		System.out.println("text1233:"+text);
+		return ("redirect:"+"/bank_select");
+	}
+	
 }
