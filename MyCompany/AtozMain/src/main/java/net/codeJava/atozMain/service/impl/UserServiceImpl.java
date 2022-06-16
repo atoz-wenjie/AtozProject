@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 
 import net.codeJava.atozEntity.User;
 import net.codeJava.atozMain.dto.UserDto;
-import net.codeJava.atozMain.service.UserService;
+import net.codeJava.atozService.UserService;
 
 @Service
 public class UserServiceImpl {

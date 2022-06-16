@@ -21,8 +21,8 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import net.codeJava.atozEntity.BankTransaction;
 import net.codeJava.atozEntity.Person;
 import net.codeJava.atozMain.constants.PathEnum;
-import net.codeJava.atozMain.service.BankTransactionService;
-import net.codeJava.atozMain.service.PersonService;
+import net.codeJava.atozService.BankTransactionService;
+import net.codeJava.atozService.PersonService;
 
 @Controller
 public class BankController {

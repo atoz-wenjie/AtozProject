@@ -11,7 +11,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import lombok.AllArgsConstructor;
 import net.codeJava.atozEntity.User;
-import net.codeJava.atozMain.service.UserService;
+import net.codeJava.atozService.UserService;
 
 @Controller
 @AllArgsConstructor

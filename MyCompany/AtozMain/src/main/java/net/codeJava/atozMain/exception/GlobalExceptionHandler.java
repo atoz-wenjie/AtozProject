@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.servlet.ModelAndView;
 
-import net.codeJava.atozMain.service.AppExceptionLogService;
+import net.codeJava.atozService.AppExceptionLogService;
 
 @ControllerAdvice
 public class GlobalExceptionHandler{

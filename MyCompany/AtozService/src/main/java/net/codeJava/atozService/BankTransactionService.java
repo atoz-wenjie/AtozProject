@@ -1,4 +1,4 @@
-package net.codeJava.atozMain.service;
+package net.codeJava.atozService;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import net.codeJava.atozEntity.BankTransaction;
-import net.codeJava.atozMain.repository.BankTransactionRepository;
+import net.codeJava.atozRepository.BankTransactionRepository;
 
 @Service
 public class BankTransactionService {

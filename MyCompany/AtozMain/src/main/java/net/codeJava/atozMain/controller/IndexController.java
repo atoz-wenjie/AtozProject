@@ -29,9 +29,9 @@ import lombok.extern.slf4j.Slf4j;
 import net.codeJava.atozEntity.BankTransaction;
 import net.codeJava.atozEntity.User;
 import net.codeJava.atozMain.dto.UserDto;
-import net.codeJava.atozMain.service.BankTransactionService;
-import net.codeJava.atozMain.service.UserService;
 import net.codeJava.atozMain.service.impl.UserServiceImpl;
+import net.codeJava.atozService.BankTransactionService;
+import net.codeJava.atozService.UserService;
 
 @Slf4j
 @Controller

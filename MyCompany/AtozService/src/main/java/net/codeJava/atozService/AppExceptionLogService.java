@@ -1,4 +1,4 @@
-package net.codeJava.atozMain.service;
+package net.codeJava.atozService;
 
 import java.sql.SQLException;
 import java.util.Date;
@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import net.codeJava.atozEntity.AppExceptionLog;
-import net.codeJava.atozMain.repository.AppExceptionRepository;
+import net.codeJava.atozRepository.AppExceptionRepository;
 
 @Service
 public class AppExceptionLogService {

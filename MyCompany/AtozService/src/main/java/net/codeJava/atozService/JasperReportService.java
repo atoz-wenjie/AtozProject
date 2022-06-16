@@ -1,4 +1,4 @@
-package net.codeJava.atozMain.service;
+package net.codeJava.atozService;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.ResourceUtils;
 
 import net.codeJava.atozEntity.User;
-import net.codeJava.atozMain.repository.UserRepository;
+import net.codeJava.atozRepository.UserRepository;
 import net.sf.jasperreports.engine.DefaultJasperReportsContext;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JasperCompileManager;

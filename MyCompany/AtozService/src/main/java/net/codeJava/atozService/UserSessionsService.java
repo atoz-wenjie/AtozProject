@@ -1,10 +1,10 @@
-package net.codeJava.atozMain.service;
+package net.codeJava.atozService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import net.codeJava.atozEntity.UserSessions;
-import net.codeJava.atozMain.repository.UserSessionsRepository;
+import net.codeJava.atozRepository.UserSessionsRepository;
 
 @Service
 public class UserSessionsService{

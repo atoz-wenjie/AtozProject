@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import net.codeJava.atozMain.service.JasperReportService;
+import net.codeJava.atozService.JasperReportService;
 import net.sf.jasperreports.engine.JRException;
 
 @Controller

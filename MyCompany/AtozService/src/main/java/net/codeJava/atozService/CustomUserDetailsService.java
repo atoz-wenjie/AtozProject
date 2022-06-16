@@ -1,4 +1,4 @@
-package net.codeJava.atozMain.service;
+package net.codeJava.atozService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -7,7 +7,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 import net.codeJava.atozEntity.CustomUserDetails;
 import net.codeJava.atozEntity.User;
-import net.codeJava.atozMain.repository.UserRepository;
+import net.codeJava.atozRepository.UserRepository;
 
 public class CustomUserDetailsService implements UserDetailsService {
     @Autowired

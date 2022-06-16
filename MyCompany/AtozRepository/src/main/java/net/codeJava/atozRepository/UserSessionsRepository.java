@@ -1,4 +1,4 @@
-package net.codeJava.atozMain.repository;
+package net.codeJava.atozRepository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

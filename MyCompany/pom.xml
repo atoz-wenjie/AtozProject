@@ -10,5 +10,7 @@
   <modules>
   	<module>AtozMain</module>
   	<module>AtozEntity</module>
+  	<module>AtozService</module>
+  	<module>AtozRepository</module>
   </modules>
 </project>

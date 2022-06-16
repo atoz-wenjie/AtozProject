@@ -1,4 +1,4 @@
-package net.codeJava.atozMain.repository;
+package net.codeJava.atozRepository;
 
 import java.util.List;
 
